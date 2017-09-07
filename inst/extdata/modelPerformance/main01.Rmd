@@ -1,0 +1,85 @@
+---
+title: "Predictive Modeling: Performance Report"
+output: 
+  flexdashboard::flex_dashboard:
+    logo: logo.png
+    css: styles.css
+---
+
+<script>
+function bgExpand(x) {
+    var text = window.getComputedStyle(x, ":before").getPropertyValue("content");
+    if (text === '"+"') {
+        x.setAttribute("data-text", "-");
+        x.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("pc-section")[0].parentElement.style.display = "none";
+        window.dispatchEvent(new Event('resize'));
+    } else {
+        x.setAttribute("data-text", "+");
+        x.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("pc-section")[0].parentElement.style.display = "flex";
+        window.dispatchEvent(new Event('resize'));
+    }
+}
+function pcExpand(x) {
+    var text = window.getComputedStyle(x, ":before").getPropertyValue("content");
+    if (text === '"+"') {
+        x.setAttribute("data-text", "-");
+        x.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("bg-section")[0].parentElement.style.display = "none";
+        window.dispatchEvent(new Event('resize'));
+    } else {
+        x.setAttribute("data-text", "+");
+        x.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("bg-section")[0].parentElement.style.display = "flex";
+        window.dispatchEvent(new Event('resize'));
+    }
+}
+</script>
+
+Gains Chart {data-icon="fa-table"}
+==================================
+
+<h2 class="project-label">%s</h2>
+
+Column
+------
+
+### <span class="page-title"><span class="page-title-fa fa fa-table"></span>Model</span>
+
+```{r}
+x$build$gcDT
+```
+
+Quantile Graphs {data-icon="fa-bar-chart"}
+==========================================
+
+<h2 class="project-label">%s</h2>
+
+Column
+------
+
+### <span class="page-title"><span class="page-title-fa fa fa-bar-chart"></span>Mean Outcome<span class="expand-button" data-text="+" onclick="bgExpand(this)"></span></span>{.bg-section}
+
+```{r}
+x$build$gcBG
+```
+
+Column
+------
+
+### <span class="page-title"><span class="page-title-fa fa fa-line-chart"></span>Cumulative Performance<span class="expand-button" data-text="+" onclick="pcExpand(this)"></span></span>{.pc-section}
+
+```{r}
+x$build$gcPC
+```
+
+Variable Contribution {data-icon="fa-sort-amount-desc"}
+=======================================================
+
+<h2 class="project-label">%s</h2>
+
+Column
+------
+
+### <span class="page-title"><span class="page-title-fa fa fa-sort-amount-desc"></span>Variable Contribution</span>
+
+```{r}
+x$varImp
+```
