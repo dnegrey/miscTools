@@ -1,0 +1,20 @@
+Package: miscTools
+Type: Package
+Version: 1.0.0
+Title: R package with miscellaneous tools
+Description: R package with miscellaneous tools
+Depends:
+    R (>= 3.4.0)
+Imports:
+    dplyr (>= 0.7.1),
+    ggplot2 (>= 2.2.1),
+    stats (>= 3.4.0),
+    rmarkdown (>= 1.6),
+    digest (>= 0.6.12),
+    ClustOfVar (>= 0.8),
+    htmltools (>= 0.3.6),
+    plotly (>= 4.7.0),
+    DT (>= 0.2),
+    flexdashboard (>= 0.5)
+LazyData: true
+RoxygenNote: 6.0.1
