@@ -1,0 +1,97 @@
+---
+title: "Predictive Modeling: Exploratory Data Analysis"
+output: 
+  flexdashboard::flex_dashboard:
+    logo: logo.png
+    css: styles.css
+---
+
+Home {data-icon="fa-home"}
+==========================
+
+```{r, child="home.Rmd"}
+```
+
+<script>
+function dsExpand(x) {
+    var text = window.getComputedStyle(x, ":before").getPropertyValue("content");
+    if (text === '"+"') {
+        x.setAttribute("data-text", "-");
+        x.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("dv-section")[0].style.display = "none";
+        x.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("vc-column")[0].style.display = "none";
+        window.dispatchEvent(new Event('resize'));
+    } else {
+        x.setAttribute("data-text", "+");
+        x.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("dv-section")[0].style.display = "flex";
+        x.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("vc-column")[0].style.display = "flex";
+        window.dispatchEvent(new Event('resize'));
+    }
+}
+function dvDistExpand(x) {
+    var text = window.getComputedStyle(x, ":before").getPropertyValue("content");
+    if (text === '"+"') {
+        x.setAttribute("data-text", "-");
+        x.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("home-section")[0].style.display = "none";
+        x.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("vc-column")[0].style.display = "none";
+        window.dispatchEvent(new Event('resize'));
+    } else {
+        x.setAttribute("data-text", "+");
+        x.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("home-section")[0].style.display = "flex";
+        x.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("vc-column")[0].style.display = "flex";
+        window.dispatchEvent(new Event('resize'));
+    }
+}
+function vcAllExpand(x) {
+    var text = window.getComputedStyle(x, ":before").getPropertyValue("content");
+    if (text === '"+"') {
+        x.setAttribute("data-text", "-");
+        x.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("home-section")[0].parentElement.style.display = "none";
+        window.dispatchEvent(new Event('resize'));
+    } else {
+        x.setAttribute("data-text", "+");
+        x.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("home-section")[0].parentElement.style.display = "flex";
+        window.dispatchEvent(new Event('resize'));
+    }
+}
+function vcVarExpand(x) {
+    var text = window.getComputedStyle(x, ":before").getPropertyValue("content");
+    if (text === '"+"') {
+        x.setAttribute("data-text", "-");
+        x.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("woe-us-section")[0].parentElement.style.display = "none";
+        window.dispatchEvent(new Event('resize'));
+    } else {
+        x.setAttribute("data-text", "+");
+        x.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("woe-us-section")[0].parentElement.style.display = "flex";
+        window.dispatchEvent(new Event('resize'));
+    }
+}
+function woeExpand(x) {
+    var text = window.getComputedStyle(x, ":before").getPropertyValue("content");
+    if (text === '"+"') {
+        x.setAttribute("data-text", "-");
+        x.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("ug-section")[0].style.display = "none";
+        x.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("vc-column")[0].style.display = "none";
+        window.dispatchEvent(new Event('resize'));
+    } else {
+        x.setAttribute("data-text", "+");
+        x.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("ug-section")[0].style.display = "flex";
+        x.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("vc-column")[0].style.display = "flex";
+        window.dispatchEvent(new Event('resize'));
+    }
+}
+function univariateGraphExpand(x) {
+    var text = window.getComputedStyle(x, ":before").getPropertyValue("content");
+    if (text === '"+"') {
+        x.setAttribute("data-text", "-");
+        x.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("woe-us-section")[0].style.display = "none";
+        x.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("vc-column")[0].style.display = "none";
+        window.dispatchEvent(new Event('resize'));
+    } else {
+        x.setAttribute("data-text", "+");
+        x.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("woe-us-section")[0].style.display = "flex";
+        x.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("vc-column")[0].style.display = "flex";
+        window.dispatchEvent(new Event('resize'));
+    }
+}
+</script>
+

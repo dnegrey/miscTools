@@ -1,0 +1,29 @@
+%s {data-navmenu="Variable Exploration" #%s}
+============================================
+
+<h2 class="variable-label">%s</h2>
+
+Column {.vc-column}
+------
+
+### <span class="page-title"><span class="page-title-fa fa fa-share-alt"></span>Variable Cluster<span class="expand-button" data-text="+" onclick="vcVarExpand(this)"></span></span>
+
+```{r}
+x$clusterDT$vars[["%s"]]
+```
+
+Column
+------
+
+### <span class="page-title"><span class="page-title-fa fa fa-balance-scale"></span>Weight of Evidence<span class="expand-button" data-text="+" onclick="woeExpand(this)"></span></span> {.woe-us-section}
+
+```{r}
+x$woeDT[["%s"]]
+```
+
+### <span class="page-title"><span class="page-title-fa fa fa-bar-chart"></span>Univariate Graph<span class="expand-button" data-text="+" onclick="univariateGraphExpand(this)"></span></span> {.ug-section}
+
+```{r}
+x$univariateGraph[["%s"]]
+```
+

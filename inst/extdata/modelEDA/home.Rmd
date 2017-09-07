@@ -1,0 +1,25 @@
+<h2 class="project-label">%s</h2>
+
+Column
+------
+
+### <span class="page-title"><span class="page-title-fa fa fa-table"></span>Data Summary<span class="expand-button" data-text="+" onclick="dsExpand(this)"></span></span>{.home-section}
+
+```{r}
+x$dataSummaryDT
+```
+
+### <span class="page-title"><span class="page-title-fa fa fa-bar-chart"></span>Dependent Variable Distribution<span class="expand-button" data-text="+" onclick="dvDistExpand(this)"></span></span>{.dv-section}
+
+```{r}
+x$y.relativeHistogram
+```
+
+Column {.vc-column}
+------
+
+### <span class="page-title"><span class="page-title-fa fa fa-share-alt"></span>Variable Clusters<span class="expand-button" data-text="+" onclick="vcAllExpand(this)"></span></span>
+
+```{r}
+x$clusterDT$all
+```

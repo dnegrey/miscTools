@@ -1,0 +1,69 @@
+.navbar,
+#navbar a {
+    background-color: #1E262E;
+    border: none;
+    margin: 0;
+    color: #FFFFFF;
+}
+.navbar-logo {
+    height: 50px;
+    margin-top: 0;
+}
+.navbar-logo img {
+    padding: 5px;
+}
+.dropdown-menu {
+    border: none;
+    background-color: #1E262E;
+    width: 150%;
+}
+.project-label {
+    font-weight: bold;
+    color: #1967BE;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.page-title-fa {
+    margin-right: 10px;
+}
+.page-title {
+    font-weight: bold;
+}
+.dataTables_wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: scroll;
+}
+td {
+    white-space: nowrap;
+}
+#navbar a:hover {
+    background-color: #1967BE;
+}
+.scrollbar {
+    visibility: hidden;
+}
+.expand-button {
+    height: 100%;
+    border: 1px solid #999999;
+    border-radius: 2px;
+    background-color: #E9E9E9;
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #E9E9E9 100%);
+    text-decoration: none;
+    padding-right: 3px;
+    padding-left: 3px;
+    font-weight: bold;
+    color: #1967BE;
+    cursor: pointer;
+    float: right;
+}
+.expand-button:hover {
+    border: 1px solid #666666;
+    background-color: #E0E0E0;
+    background-image: linear-gradient(to bottom, #F9F9F9 0%, #E0E0E0 100%);
+}
+.expand-button:before {
+    content: attr(data-text);
+}
